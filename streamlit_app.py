@@ -154,8 +154,6 @@ elif key == "why":
 
         💡 *Каждый агент = слой мышления*.  
         Это как если бы IDE знала твои привычки, а не просто синтаксис.
-
-        [Подробнее про формат AGENTS.md](https://agents.md) — официальный документ со структурой ролей, примерами и best practices.
         """,
     )
 elif key == "agents":
@@ -245,28 +243,9 @@ elif key == "lessons":
 
 st.sidebar.markdown("---")
 
-# Шаблон AGENTS.md для скачивания
-AGENTS_MD_TEMPLATE = """# AGENTS.md
-## Setup
-- Install deps: `pip install -r requirements.txt`
-- Run: `streamlit run streamlit_app.py`
-
-## Roles
-- Architect: defines scope, stack, and constraints
-- Coder: implements tasks in small verifiable steps
-- Reviewer: enforces tests, linting, and security checks
-
-## Conventions
-- Small PRs with clear intent
-- Tests & type hints for non-trivial logic
-- Secrets never in code; use env/secret manager
-"""
-st.sidebar.download_button(
-    "Скачать AGENTS.md‑шаблон",
-    AGENTS_MD_TEMPLATE,
-    file_name="AGENTS.md",
-    mime="text/markdown",
+st.sidebar.markdown(
+    "[Подробнее про формат AGENTS.md](https://agents.md) — официальный документ со структурой ролей, примерами и best practices."
 )
 st.sidebar.markdown(
-    "[Открыть репозиторий/слайды](https://github.com/if-i/vibe-coding-seminar)"
+    "[Репозиторий/слайды](https://github.com/if-i/vibe-coding-seminar)"
 )
