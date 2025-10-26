@@ -158,10 +158,10 @@ elif key == "how":
         """
         1. Установи плагин [codex-launcher](https://github.com/x0x0b/codex-launcher) через Marketplace в PyCharm.  
         2. Запусти плагин: и выдай нужные разрешения:
-          - `Allow Codex to work in this folder without asking for approval`
-          - `Require approval of edits and commands`
+            - `Allow Codex to work in this folder without asking for approval`
+            - `Require approval of edits and commands`
         3. При необходимости инициализируй `AGENTS.md` в автоматическом режиме:
-          - `/init - create an AGENTS.md file with instructions for Codex`
+            - `/init - create an AGENTS.md file with instructions for Codex`
         4. Пиши команды в консоль - Codex сгенерирует код прямо в IDE, при необходимости уточните запрос или роль.  
         5. Проверь и интегрируй результат.
         """,
