@@ -243,9 +243,5 @@ elif key == "lessons":
 
 st.sidebar.markdown("---")
 
-st.sidebar.markdown(
-    "[Подробнее про формат AGENTS.md](https://agents.md) — официальный документ со структурой ролей, примерами и best practices."
-)
-st.sidebar.markdown(
-    "[Репозиторий/слайды](https://github.com/if-i/vibe-coding-seminar)"
-)
+st.sidebar.markdown("[Подробнее про формат AGENTS.md](https://agents.md)")
+st.sidebar.markdown("[Репозиторий/слайды](https://github.com/if-i/vibe-coding-seminar)")
