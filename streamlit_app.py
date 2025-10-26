@@ -124,15 +124,6 @@ selected = st.sidebar.radio(
     "Перейти к слайду:", slides, index=slides.index(st.session_state["slide"])
 )
 
-# Next/Prev
-c1, _, c3 = st.columns([1, 6, 1])
-i = slides.index(selected)
-with c1:
-    if st.button("⬅️", disabled=(i == 0)):
-        selected = slides[i - 1]
-with c3:
-    if st.button("➡️", disabled=(i == len(slides) - 1)):
-        selected = slides[i + 1]
 st.session_state["slide"] = selected
 
 # Краткие описания (alt/резюме)
