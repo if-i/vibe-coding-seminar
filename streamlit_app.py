@@ -162,13 +162,14 @@ elif key == "how":
             - `Require approval of edits and commands`
         3. При необходимости инициализируй `AGENTS.md` в автоматическом режиме:
             - `/init - create an AGENTS.md file with instructions for Codex`
-        3.1. Другие полезные команды:
+        4. Другие полезные команды:
             - `/status - show current session configuration`
             - `/approvals - choose what Codex can do without approval`
             - `/model - choose what model and reasoning effort to use`
             - `/review - review any changes and find issues`
-        4. Пиши команды в консоль - Codex сгенерирует код прямо в IDE, при необходимости уточните запрос или роль.  
-        5. Проверь и интегрируй результат.
+        5. Пиши команды в консоль - Codex сгенерирует код прямо в IDE, при необходимости уточните запрос или роль.  
+        6. Помни о важности тестирования, тесты Codex не только пишет хорошо, но и умеет сам их запускать (при условии того, что корректно описаны нюансы окружения и запуска таких тестов, например запуск в контейнере)
+        7. Проверь и интегрируй результат.
         """,
     )
 elif key == "why":
