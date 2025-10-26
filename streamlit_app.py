@@ -124,8 +124,6 @@ selected = st.sidebar.radio(
     "Перейти к слайду:", slides, index=slides.index(st.session_state["slide"])
 )
 
-st.session_state["slide"] = selected
-
 # Краткие описания (alt/резюме)
 summaries = {
     "intro": "Введение: Codex и AGENTS.md как ОС для вайбкодинга.",
