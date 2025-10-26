@@ -2,6 +2,20 @@ import streamlit as st
 from io import BytesIO
 
 # SVG data for slides
+import base64
+
+# Monkey patch st.image to support SVG display
+_original_image = st.image
+
+def _patched_image(data, format=None, use_column_width=None):
+    if format == "svg":
+        b64 = base64.b64encode(data.getvalue()).decode()
+        html = f'<img src="data:image/svg+xml;base64,{b64}" style="width:100%;height:auto;" />'
+        st.markdown(html, unsafe_allow_html=True)
+    else:
+        _original_image(data, format=format, use_column_width=use_column_width)
+
+st.image = _patched_image
 svg_data = {
     "intro": """<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
     <rect width="800" height="200" fill="#4B86F4" rx="20" ry="20"/>
