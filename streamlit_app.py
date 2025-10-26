@@ -243,6 +243,8 @@ elif key == "lessons":
         """,
     )
 
+st.sidebar.markdown("---")
+
 # Шаблон AGENTS.md для скачивания
 AGENTS_MD_TEMPLATE = """# AGENTS.md
 ## Setup
