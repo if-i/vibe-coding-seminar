@@ -89,35 +89,9 @@ def slide(title: str, content: str, subtitle: str | None = None) -> None:
 slides = ["intro", "what", "why", "agents", "workflow", "prompts", "results", "lessons"]
 
 # Боковая панель и CTA
-st.sidebar.title("🎛️ Навигация по слайдам")
+st.sidebar.title("🎛️ Навигация")
 if "slide" not in st.session_state:
     st.session_state["slide"] = slides[0]
-
-# Шаблон AGENTS.md для скачивания
-AGENTS_MD_TEMPLATE = """# AGENTS.md
-## Setup
-- Install deps: `pip install -r requirements.txt`
-- Run: `streamlit run streamlit_app.py`
-
-## Roles
-- Architect: defines scope, stack, and constraints
-- Coder: implements tasks in small verifiable steps
-- Reviewer: enforces tests, linting, and security checks
-
-## Conventions
-- Small PRs with clear intent
-- Tests & type hints for non-trivial logic
-- Secrets never in code; use env/secret manager
-"""
-st.sidebar.download_button(
-    "Скачать AGENTS.md‑шаблон",
-    AGENTS_MD_TEMPLATE,
-    file_name="AGENTS.md",
-    mime="text/markdown",
-)
-st.sidebar.markdown(
-    "[Открыть репозиторий/слайды](https://github.com/if-i/vibe-coding-seminar)"
-)
 
 # Радио для выбора слайда
 selected = st.sidebar.radio(
@@ -268,3 +242,29 @@ elif key == "lessons":
         🧠 *Вайбкодинг = синергия между агентами, кодом и состоянием сознания разработчика.*
         """,
     )
+
+# Шаблон AGENTS.md для скачивания
+AGENTS_MD_TEMPLATE = """# AGENTS.md
+## Setup
+- Install deps: `pip install -r requirements.txt`
+- Run: `streamlit run streamlit_app.py`
+
+## Roles
+- Architect: defines scope, stack, and constraints
+- Coder: implements tasks in small verifiable steps
+- Reviewer: enforces tests, linting, and security checks
+
+## Conventions
+- Small PRs with clear intent
+- Tests & type hints for non-trivial logic
+- Secrets never in code; use env/secret manager
+"""
+st.sidebar.download_button(
+    "Скачать AGENTS.md‑шаблон",
+    AGENTS_MD_TEMPLATE,
+    file_name="AGENTS.md",
+    mime="text/markdown",
+)
+st.sidebar.markdown(
+    "[Открыть репозиторий/слайды](https://github.com/if-i/vibe-coding-seminar)"
+)
