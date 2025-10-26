@@ -28,6 +28,13 @@ svg_data = {
       Why AGENTS.md?
     </text>
     </svg>""",
+    "how": """<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="200" fill="#008CDB" rx="20" ry="20"/>
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+          font-size="36" fill="#ffffff" font-family="Arial, sans-serif">
+      How
+    </text>
+    </svg>""",
     "agents": """<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
     <rect width="800" height="200" fill="#65C18C" rx="20" ry="20"/>
     <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
@@ -103,6 +110,7 @@ summaries = {
     "intro": "Введение: Codex и AGENTS.md как ОС для вайбкодинга.",
     "what": "Что такое vibe coding и когда применять: rapid prototyping, внутренние тулзы; ограничения: нужен тестовый/ревью процесс для прод.",
     "why": "Зачем AGENTS.md: структурирует вибрацию кода, хранит контекст, сохраняет flow.",
+    "how": "Как использовать Codex в PyCharm через плагин codex‑launcher.",
     "agents": "Роли: Architect, Coder, Reviewer — отвечают за архитектуру, реализацию, ревью.",
     "workflow": "Рабочий цикл: Architect ставит задачу, Coder пишет, Reviewer проверяет.",
     "prompts": "Промпты: примеры хорошо и плохо работающих запросов.",
@@ -143,10 +151,16 @@ elif key == "what":
         """,
     )
 elif key == "how":
+    render_svg(svg_data["how"], alt=summaries["how"])
+    st.caption(summaries["how"])
     slide(
-        "",
+        "Как я использую Codex в PyCharm",
         """
-        - 🧠 Использую Codex в PyCharm через плагин [codex-launcher](https://github.com/x0x0b/codex-launcher)
+        1. Установи плагин [codex-launcher](https://github.com/x0x0b/codex-launcher) через Marketplace в PyCharm.  
+        2. Запусти плагин: выберите роль (Architect, Coder, Reviewer) и введите промпт.  
+        3. При необходимости инициализируй с помощью codex `AGENTS.md`
+        4. Codex сгенерирует код прямо в IDE; при необходимости уточните запрос или роль.  
+        5. Проверь и интегрируй результат, следуя правилам из AGENTS.md.
         """,
     )
 elif key == "why":
